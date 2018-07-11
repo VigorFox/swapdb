@@ -8,6 +8,7 @@ SET(JEMALLOC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/deps/jemalloc)
 SET(SNAPPY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/deps/snappy)
 SET(GFLAGS_PATH ${CMAKE_CURRENT_SOURCE_DIR}/deps/gflags)
 SET(BZIP2_PATH ${CMAKE_CURRENT_SOURCE_DIR}/deps/bzip2-1.0.6)
+SET(ZLIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/deps/zlib)
 
 # Set a default build type if none was specified
 if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
@@ -43,6 +44,7 @@ LINK_DIRECTORIES(
         ${GFLAGS_PATH}/lib/
         ${SNAPPY_PATH}/
         ${JEMALLOC_PATH}/lib/
+        ${ZLIB_PATH}/
         ${CMAKE_CURRENT_SOURCE_DIR}/src/ssdb
         ${CMAKE_CURRENT_SOURCE_DIR}/src/client
         ${CMAKE_CURRENT_SOURCE_DIR}/src/util
